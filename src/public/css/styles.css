@@ -1,0 +1,17 @@
+#hero {
+  /*opacity: 0;*/
+  height: 125vh;
+  background: url("https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6e50d8f4-ae5a-4360-9edc-5547bbab264a.jpg?fit=scale-down&source=next&width=700") center / cover no-repeat;
+  background-attachment: inherit;
+}
+
+@media (min-width: 992px) {
+  #hero {
+    background: url("https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F6e50d8f4-ae5a-4360-9edc-5547bbab264a.jpg?fit=scale-down&source=next&width=700") center / cover no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+.navbar-brand {
+}
+
