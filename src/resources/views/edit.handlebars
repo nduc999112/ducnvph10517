@@ -1,0 +1,19 @@
+
+
+
+<section>
+    <form action="edit" style="width: 519.6px;height: 852px;margin: -2px;padding: 67px;background: var(--pink);margin-right: 29px;margin-left: 477px;margin-top: 121px;border: 3.4px dashed var(--blue);border-radius: 32px;box-shadow: 16px 16px 19px 4px;filter: grayscale(0%);" method="post" >
+    <h1 style="text-align: left;font-size: 38px;color: var(--warning);font-family: 'Abril Fatface', serif;margin-bottom: 38px;margin-left: 24px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  VUI LÒNG CẬP NHẬT LẠI THÔNG TIN </h1>
+    <input type="hidden" name="id" value="{{user._id}}">
+    <div class="form-group"><input class="form-control" type="file" placeholder="Avatar" name="images"  style="border-radius: 11px;padding: 6px 12px;"></div>
+    <div class="form-group"><input class="form-control" type="text" placeholder="Name" value="{{user.name}}" style="border-radius: 11px;padding: 6px 12px;"></div>
+    <div class="form-group"><input class="form-control" type="date" placeholder="Ngày Sinh" name="birthday" value="{{user.birthday}}" style="border-radius: 11px;padding: 6px 12px;"></div>
+    <div class="form-group"><input class="form-control" type="email" value="{{user.email}}" placeholder="email" name="email" style="border-radius: 9px;"></div>
+    <div class="form-group"><input class="form-control" type="tel" value="{{user.number_phone}}" name="number_phone" placeholder="phone number" style="border-radius: 10px;"></div>
+    <div class="form-group"><input class="form-control" type="text" name="sex" value="{{user.sex}}"  placeholder="SEX" style="border-radius: 8px;"></div>
+    <div class="form-group"><input class="form-control" type="text" name="hobby"  placeholder="Hobby" value="{{user.hobby}}" style="border-radius: 9px;"></div>
+    <div class="form-group"><input class="form-control" type="text" placeholder="About" name="about" value="{{user.about}}" style="border-radius: 11px;padding: 6px 12px;"></div>
+    <div class="btn-group" role="group"><button class="btn btn-success" type="submit" style="margin: -1px;padding: 9px 12px;margin-right: 124px;height: 43px;width: 130.7625px;border-radius: 19px;border-width: 0px;margin-left: 2px;margin-top: 32px;">SAVE</button>
+        <a class="btn btn-primary" href="/userdetail" type="button" style="width: 130.7375px;height: 48px;margin: 31px 0px 0px -1px;margin-top: 29px;border-radius: 24px;margin-right: 22px;">CANDLE</a></div>
+    </form>
+</section>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,500&display=swap"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>Document</title>
+</head>
+<body background="#ffffff">
+<div class="container">
+    <div class="side">
+        <div class="header">
+            <div class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="" />
+            </div>
+            <div class="title">Xin Chào {{username}} !!</div>
+        </div>
+        <div class="menu">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#tab1" data-toggle="tab" class="nav-link ">List User</a>
+                </li>
+<!--                <li class="nav-item">-->
+<!--                    <a href="#tab2" data-toggle="tab" class="nav-link ">Add User</a>-->
+<!--                </li>-->
+                <li class="nav-item">
+                    <a href="#tab2"  data-toggle="tab"  class="nav-link">Người Dùng</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tab3"  data-toggle="tab"  class="nav-link">Thêm Người Dùng</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Nội dung -->
+
+        <div class="messages">
+            <div class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/38.jpg" alt="" />
+            </div>
+            <div class="message">
+                <div class="user">Caroline</div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+            </div>
+        </div>
+        <div class="messages">
+            <div class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/39.jpg" alt="" />
+            </div>
+            <div class="message">
+                <div class="user">Caroline</div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+            </div>
+        </div>
+        <div class="messages">
+            <div class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="" />
+            </div>
+            <div class="message">
+                <div class="user">Caroline</div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+            </div>
+        </div>
+        <div class="messages">
+            <div class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/41.jpg" alt="" />
+            </div>
+            <div class="message">
+                <div class="user">Caroline</div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+            </div>
+        </div>
+        <div class="messages">
+            <div class="avatar">
+                <img src="https://randomuser.me/api/portraits/women/42.jpg" alt="" />
+            </div>
+            <div class="message">
+                <div class="user">Caroline</div>
+                <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+            </div>
+        </div>
+    </div>
+        <div class="tab-content">
+    <div class="tab-pane container active" id="tab1">
+        <table class="table table-bordered">
+            <tr>
+                <th>Avatar</th>
+                <th>FULL NAME</th>
+                <th>BIRTHDAY</th>
+                <th>USERNAME</th>
+                <th>PASSWORD</th>
+                <th>EMAIL</th>
+                <th>NUMBER PHONE</th>
+                <th>SEX</th>
+                <th>HOBBY</th>
+                <th>ABOUT</th>
+                <th>ACTION</th>
+
+            </tr>
+            {{#each ups}}
+                <tr>
+                    <td><img width="50px" height="50px" src="{{this.images}}"></td>
+                    <td>{{this.name}}</td>
+                    <td>{{this.birthday}}</td>
+                    <td>{{this.username}}</td>
+                    <td>{{this.password}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{number_phone}}</td>
+                    <td>{{this.sex}}</td>
+                    <td>{{this.hobby}}</td>
+                    <td>{{this.about}}</td>
+                    <td>
+                        <a href="/{{this._id}}"  class="btn btn-primary btn-sm"> EDIT</a>
+                        <a href="/delete/{{this._id}}" onclick="return confirm('Are you sure ?')" class="btn btn-danger btn-sm">DELETE</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+    <!--        //-->
+
+    <div style="margin-left: 200px;margin-top: 100px" class="tab-pane fade" id="tab2">
+        <div class="content" >
+            <div class="card">
+                <div class="user">
+                    <img
+                            class="user"
+                            src="https://images.unsplash.com/photo-1532910404247-7ee9488d7292?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=375&q=80"
+                            alt=""
+                    />
+                    <div class="profile">
+                        <div class="name">Rafaela <span>20</span></div>
+                        <div class="local">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>a 20 quilômetros daqui</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="no">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="star">
+                    <i class="fas fa-star fa"></i>
+                </div>
+                <div class="heart">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- update user-->
+
+        <div style="margin-left: 200px" class="tab-pane fade" id="tab3">
+            <a href="/signup" type="button" class="btn btn-primary" >Trở Lại Trang SignUp</a>
+            </div>
+
+</div>
+</div>
+</body>
+</html>
